@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://saranonearth:s123@devconnector-4z81e.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "boomboom"
+}
