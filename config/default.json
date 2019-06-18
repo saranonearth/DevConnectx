@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://saranonearth:s123@devconnector-4z81e.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "boomboom"
+  "jwtSecret": "boomboom",
+  "githubClientId": "062f2a4b1e3dc4f129a4",
+  "githubClientSecret": "526f719588a615f79961d721b0c802a80863a19a"
 }
