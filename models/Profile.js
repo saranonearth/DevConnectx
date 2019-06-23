@@ -87,23 +87,23 @@ const ProfileSchema = new mongoose.Schema({
       }
     }
   ],
-  socical: {
-    youtube: {
-      type: String
-    },
-    twitter: {
-      type: String
-    },
-    facebook: {
-      type: String
-    },
-    linkedin: {
-      type: String
-    },
-    instagram: {
-      type: String
-    }
+
+  youtube: {
+    type: String
   },
+  twitter: {
+    type: String
+  },
+  facebook: {
+    type: String
+  },
+  linkedin: {
+    type: String
+  },
+  instagram: {
+    type: String
+  },
+
   date: {
     type: Date,
     default: Date.now

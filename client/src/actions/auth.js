@@ -43,14 +43,13 @@ export const register = (name, email, password) => async dispatch => {
 
   try {
     const res = await axios.post('/api/users', body, config);
-    console.log(res.data);
+
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data
     });
     dispatch(loadUser());
   } catch (err) {
-    console.log(err.response);
     const errors = err.response.data.errors;
     if (errors) {
       errors.forEach(error => dispatch(setAlert(error.msg, 'danger', 4000)));
