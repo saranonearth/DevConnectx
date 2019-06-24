@@ -26,7 +26,7 @@ const AddEducation = ({ addEducation, history }) => {
     current,
     description
   } = formData;
-  console.log(current);
+
   const onChange = e =>
     setFormData({
       ...formData,
@@ -99,7 +99,6 @@ const AddEducation = ({ addEducation, history }) => {
               checked={current}
               type='checkbox'
               name='current'
-              value=''
               value={current}
               onChange={e => {
                 setFormData({ ...formData, current: !current });
@@ -120,9 +119,9 @@ const AddEducation = ({ addEducation, history }) => {
           />
         </div>
         <input type='submit' className='btn btn-primary my-1' />
-        <a className='btn my-1' href='dashboard.html'>
+        <Link className='btn my-1' to='/dashboard'>
           Go Back
-        </a>
+        </Link>
       </form>
     </Fragment>
   );

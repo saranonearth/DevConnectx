@@ -7,7 +7,7 @@ import ProfileItem from '../../components/Profile-Form/ProfileItem';
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles();
-  }, []);
+  }, [getProfiles]);
 
   return (
     <Fragment>
@@ -20,7 +20,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             <i className='fab fa-connectdevelop' />
             Browse and connect with developers
           </p>
-          <div classNmae='profiles'>
+          <div className='profiles'>
             {profiles.length > 0 ? (
               profiles.map(profile => (
                 <ProfileItem key={profile._id} profile={profile} />

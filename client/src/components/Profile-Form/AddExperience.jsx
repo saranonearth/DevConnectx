@@ -18,7 +18,6 @@ const AddExperience = ({ addExperience, history }) => {
   const [toDateDisabled, toggleDisabled] = useState(false);
 
   const { company, title, location, from, to, current, description } = formData;
-  console.log(current);
   const onChange = e =>
     setFormData({
       ...formData,
@@ -91,7 +90,6 @@ const AddExperience = ({ addExperience, history }) => {
               checked={current}
               type='checkbox'
               name='current'
-              value=''
               value={current}
               onChange={e => {
                 setFormData({ ...formData, current: !current });
@@ -112,9 +110,9 @@ const AddExperience = ({ addExperience, history }) => {
           />
         </div>
         <input type='submit' className='btn btn-primary my-1' />
-        <a className='btn my-1' href='dashboard.html'>
+        <Link className='btn my-1' to='/dashboard'>
           Go Back
-        </a>
+        </Link>
       </form>
     </Fragment>
   );
