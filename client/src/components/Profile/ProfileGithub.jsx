@@ -7,7 +7,7 @@ import Spiner from '../../components/layouts/Spiner';
 const ProfileGithub = ({ username, getRepos, repos }) => {
   useEffect(() => {
     getRepos(username);
-  }, [getRepos]);
+  }, [getRepos, username]);
   return (
     <>
       {!repos.length > 0 ? (

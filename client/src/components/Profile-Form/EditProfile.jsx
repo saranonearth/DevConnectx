@@ -39,12 +39,24 @@ const EditProfile = ({
         loading || !profile.githubusername ? '' : profile.githubusername,
       bio: loading || !profile.bio ? '' : profile.bio,
       twitter: loading || !profile.social ? '' : profile.social.twitter,
-      facebook: loading || !profile.social ? '' : profile.social.facebook,
+      facebook: loading || !profile.facebook ? '' : profile.social.facebook,
       linkedin: loading || !profile.social ? '' : profile.social.linkedin,
       youtube: loading || !profile.social ? '' : profile.social.youtube,
       instagram: loading || !profile.social ? '' : profile.social.instagram
     });
-  }, [loading, getCurrentProfile]);
+  }, [
+    loading,
+    getCurrentProfile,
+    profile.company,
+    profile.bio,
+    profile.skills,
+    profile.website,
+    profile.location,
+    profile.status,
+    profile.githubusername,
+    profile.facebook,
+    profile.social
+  ]);
 
   const {
     company,
