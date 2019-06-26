@@ -5,6 +5,9 @@
   "homepage": "http://naras.xyz/DevConnectx/",
   "main": "index.js",
   "scripts": {
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "start": "node server",
     "server": "nodemon server",
     "client": "npm start --prefix client",
