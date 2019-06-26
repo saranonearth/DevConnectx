@@ -2,6 +2,7 @@
   "name": "MERN",
   "version": "1.0.0",
   "description": "",
+  "homepage": "http://naras.xyz/DevConnectx/",
   "main": "index.js",
   "scripts": {
     "start": "node server",
