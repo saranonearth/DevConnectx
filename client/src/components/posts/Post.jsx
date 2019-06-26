@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 import { getPosts } from '../../actions/post';
 import Spiner from '../layouts/Spiner';
 import PostItem from './PostItem';
+import AddPost from './AddPost';
 
 const Post = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
     getPosts();
   }, [getPosts]);
-  console.log(posts);
   return loading ? (
     <Spiner />
   ) : (
@@ -18,7 +18,7 @@ const Post = ({ getPosts, post: { posts, loading } }) => {
       <p className='lead'>
         <i className='fas fa-user' /> Welcome to the community
       </p>
-      {/* Post form */}
+      <AddPost />
       <div className='posts'>
         {posts.map(post => (
           <PostItem key={post._id} post={post} />
